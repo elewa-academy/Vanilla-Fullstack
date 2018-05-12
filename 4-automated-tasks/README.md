@@ -34,7 +34,6 @@ In this project we'll be learning how to use Gulp.js to write simple build scrip
 
 * The be-youtube project contains links to the resources necessary.
 * [Break-down of the script you'll use](https://github.com/jankeLearning/content-md/blob/master/dev-knowledge/04-packaging.md)
-* 
 
 [TOP](#index)
 
