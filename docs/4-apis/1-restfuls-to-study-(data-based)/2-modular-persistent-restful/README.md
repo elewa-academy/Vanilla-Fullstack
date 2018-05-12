@@ -1,0 +1,1 @@
+This app has no controller, the handler doubles as the controller.  Can you refactor this to have a controller?

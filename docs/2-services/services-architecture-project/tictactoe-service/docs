@@ -1,0 +1,35 @@
+## Using this service in your application:
+
+this module exports a single object from it's index.js file:
+
+	ttt_service: object
+		methods: 2
+			init: function
+				args: 1
+					view: a view object
+				return: undefined
+				behavior: inits the app object with the given view
+			play: function
+				args: 2
+					row: number -> the row played
+					column: number -> the column played
+				return: undefined
+				behavior: updates game state, draws new move
+
+
+
+The view object you inject should match these specs:
+	methods: 3
+		repopulateBoard:
+			args: 1
+				boardState: 3x3 array of arrays
+			return: undefined
+			behavior: redraws the board a player sees 
+		buildBoard: 
+			args: 0
+			return: undefined
+			behavior: builds the initial ui
+		alert: function
+			args: 1, string
+			return: undefined
+			behavior: tell the user they messed up

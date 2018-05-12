@@ -1,0 +1,12 @@
+<div><b><%= newest %></b></div>
+<table>
+<% for(var i=0; i < data.length; i++) { %>
+   <tr>
+     <td><%= i %></td>
+     <td><%= data[i] %></td>
+   </tr>
+<% } %>
+</table>
+
+
+	

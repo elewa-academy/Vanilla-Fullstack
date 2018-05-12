@@ -1,0 +1,428 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1. CRUD · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../2-services/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    API's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1. CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2-services/">
+            
+                <a href="../2-services/">
+            
+                    
+                    2. Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3-clis/">
+            
+                <a href="../3-clis/">
+            
+                    
+                    3. CLI's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4-apis/">
+            
+                <a href="../4-apis/">
+            
+                    
+                    4. API's
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <a target="_blank" href="https://github.com/elewa-academy/General-Resources/wiki">
+            
+                    
+                    Wiki
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <a target="_blank" href="https://github.com/elewa-academy/APIs/tree/master">
+            
+                    
+                    Repo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <a target="_blank" href="https://elewa-academy.github.io">
+            
+                    
+                    Home
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1. CRUD</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="crud">CRUD</h1>
+<p>Create, Read, Update, Delete.</p>
+<p>These are the basic Data Access operations.  In this project you will build a basic command line application (CLI) that allows you to take read and write notes directly from the command line into a .json file.</p>
+<p>Along the way you&apos;ll learn about Model Objects and File IO (one of Node&apos;s 3 super-powers).</p>
+<h3 id="index">Index</h3>
+<ul>
+<li><a href="#learning-objectives">Learning Objectives</a></li>
+<li><a href="#specifications">Specifications</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#assessment">Assessment</a></li>
+</ul>
+<hr>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>JSON</li>
+<li>Reading &amp; Writing to files</li>
+<li>Model objects</li>
+<li>Closures</li>
+<li>CRUD operations</li>
+<li>CLI&apos;s</li>
+</ul>
+<p><a href="#index">TOP</a></p>
+<hr>
+<h2 id="specifications">Specifications</h2>
+<ol>
+<li><p>For each <em>basic model</em> file in this <a href="https://github.com/elewa-academy/Modular-Design/tree/master/docs_src/1-crud/crud-app" target="_blank">demo app</a>:</p>
+<ul>
+<li>Write the model object</li>
+<li>Test the model object in your /tests folder</li>
+</ul>
+</li>
+<li><p>For each model file with &quot;json&quot; in the name:</p>
+<ul>
+<li>Write the model object<ul>
+<li>User Stories:<ul>
+<li>Create</li>
+<li>Read</li>
+<li>Update</li>
+<li>Delete</li>
+<li>Initialize (creates .json file with empty DB object)</li>
+<li>Reset (clears nextID &amp; data)</li>
+<li>Set name of DB</li>
+<li>See a helpful message or error after each operation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Test the model objecti in your /tests folder</li>
+</ul>
+</li>
+<li>Write a Node.js Handler &amp; View.  </li>
+<li>Build a repo for this project and include it on your portfolio.</li>
+</ol>
+<p>Challenge:</p>
+<ul>
+<li>Allow a user to CRUD nested notes</li>
+</ul>
+<p><a href="#index">TOP</a></p>
+<hr>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/elewa-academy/APIs/tree/master" target="_blank">code to study</a></li>
+</ul>
+<p>File I/O in Node:</p>
+<ul>
+<li><a href="http://stackabuse.com/reading-and-writing-json-files-with-node-js/" target="_blank">Stackabuse</a></li>
+<li><a href="https://www.codementor.io/codementorteam/how-to-use-json-files-in-node-js-85hndqt32" target="_blank">Codementor</a></li>
+<li><a href="https://github.com/jprichardson/node-jsonfile" target="_blank">node-jsonfile</a></li>
+<li><a href="https://github.com/elewa-academy/Modular-Design/" target="_blank">By Example</a> - some of the apps have a db.txt, those use file io</li>
+<li><a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank">JSON format</a></li>
+<li><a href="https://jaketrent.com/post/paths-in-node/" target="_blank">__dirname</a></li>
+</ul>
+<p>Error Handling with Callbacks:</p>
+<ul>
+<li><a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/" target="_blank">Error First Convention</a></li>
+<li><a href="https://github.com/elewa-academy/General-Resources/tree/master/code-to-study/progressive-callbacks" target="_blank">By Example</a></li>
+</ul>
+<p>Blocking &amp; Non-Blocking:</p>
+<ul>
+<li><a href="https://bytearcher.com/articles/blocking-vs-non-blocking-in-node.js/" target="_blank">Blocking vs Non-Blocking 1</a></li>
+<li><a href="http://www.programmr.com/blogs/difference-between-asynchronous-and-non-blocking" target="_blank">Blocking vs Non-Blocking 2</a></li>
+<li><a href="https://www.codementor.io/theresamostert/understanding-non-blocking-i-o-in-javascript-cvmg1hp6l" target="_blank">Non-Blocking I/O 1</a></li>
+<li><a href="http://sebastianmetzger.com/handle-asynchronous-non-blocking-io-in-javascript/" target="_blank">Non-Blocking I/O 2</a></li>
+<li><a href="https://softwareengineering.stackexchange.com/questions/202047/what-determines-which-javascript-functions-are-blocking-vs-non-blocking" target="_blank">How to know the difference?</a></li>
+</ul>
+<p>NPM Installing:</p>
+<ul>
+<li><a href="https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/" target="_blank">Nodesource</a></li>
+<li><a href="https://www.impressivewebs.com/npm-for-beginners-a-guide-for-front-end-developers/" target="_blank">Impressivewebs</a></li>
+<li><a href="https://medium.freecodecamp.org/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8" target="_blank">Requiring Modules vs Files</a></li>
+<li><a href="https://www.w3schools.com/nodejs/ref_modules.asp" target="_blank">Node.js Built-in Modules</a></li>
+</ul>
+<p>Closures:</p>
+<ul>
+<li><a href="https://elewa-academy.github.io/General-Resources/javascript/closures.html" target="_blank">General Resources</a></li>
+<li><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/scope%20%26%20closures" target="_blank">You Don&apos;t Know JS</a></li>
+</ul>
+<p><a href="#index">TOP</a></p>
+<hr>
+<hr>
+<h3 id=""><a href="http://elewa.education/blog" target="_blank"><img src="https://user-images.githubusercontent.com/18554853/34921062-506450ae-f97d-11e7-875f-6feeb26ad72d.png" width="100" height="40"></a></h3>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: API's">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../2-services/" class="navigation navigation-next " aria-label="Next page: 2. Services">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1. CRUD","level":"1.2","depth":1,"next":{"title":"2. Services","level":"1.3","depth":1,"path":"2-services/README.md","ref":"./2-services/README.md","articles":[]},"previous":{"title":"API's","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"1-crud/README.md","mtime":"2018-05-08T12:45:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-05-11T15:49:43.018Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
