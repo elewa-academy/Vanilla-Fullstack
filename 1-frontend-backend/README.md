@@ -50,6 +50,7 @@ Promises:
 * [Scotch.io](https://scotch.io/tutorials/javascript-promises-for-dummies)
 * [JavaScript.info](https://javascript.info/promise-basics)
 * [Promises & Axios](https://github.com/elewa-academy/General-Resources/blob/master/javascript/async-to-sort.md)
+* [Axios on GitHub](https://github.com/axios/axios)
 
 CORS:
 * [What is it?](https://www.codecademy.com/articles/what-is-cors)
