@@ -18,19 +18,21 @@ app.get("/", (req, res) => {
 	res.send("welcome to my zoo");
 })
 
+// initialize services
+let rest_services = {}
 for (animal in config.ANIMALS) {
 
 	let path_to_db = config.DBs[config.ANIMALS[animal]];
-	console.log(path_to_db)
-	console.log(animal)
-	console.log(config.ANIMALS[animal])
 	let next_service = rest_service(animal, path_to_db); 
-
-	let route = "/" + animal;
-	console.log(route)
-	app.use(route, next_service);
+	rest_services[animal] = next_service;
 
 }
+
+console.log(rest_services)
+// use services
+app.get("/:data_type", (req, res) => {
+	rest_services[req.params.data_type]();
+})
 
 // launch app
 app.listen(config.PORT, (err) => {
