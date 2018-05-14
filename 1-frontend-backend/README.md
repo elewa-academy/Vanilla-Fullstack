@@ -24,6 +24,10 @@ Put your sevice behind an API.
 ## Specifications
 
 0. Run the Frontend/Backend projects locally to figure out what's going on.
+  1. Clone this repo
+  2. Run the API of your choice in the terminal (ie. node ./0-frontend-backend/backends/take-your-pick)
+  3. Open the Frontend in your browser (ie. ./0-frontend-backend/frontend/index.html)
+  4. Follow the documentation in the browser to access the API you're running
 1. Build a new and pretty Frontend (HTML/CSS/JS) for the "api_connection" object provided as sample code, you can do it for whichever API you like most. (We recommend copying the file so you have the original as reference.)
 2. Deploy at least one of the provided backends to Heroku.
 3. Make a repository to host this project.  Run the frontend you built on gh-pages, it will connect with your Heroku deployment.
