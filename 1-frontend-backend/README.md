@@ -15,6 +15,7 @@ Put your sevice behind an API.
 * Deploying to Heroku
 * Cross Origin Resource Sharing
 * Environmental Variables
+* Promises (cooler callbacks)
 
 [TOP](#index)
 
@@ -22,9 +23,10 @@ Put your sevice behind an API.
 
 ## Specifications
 
-0. Deploy one of the provided backends to Heroku
-1. Build a pretty Frontend (HTML/CSS/JS) for the "api_connection" object provided in this folder, it will be used to communicate with your backend.
-2. Make a repository to host this project.  Run the frontend you built on gh-pages, it will connect with your Heroku deployment.
+0. Run the Frontend/Backend projects locally to figure out what's going on.
+1. Build a new and pretty Frontend (HTML/CSS/JS) for the "api_connection" object provided as sample code, you can do it for whichever API you like most. (We recommend copying the file so you have the original as reference.)
+2. Deploy at least one of the provided backends to Heroku.
+3. Make a repository to host this project.  Run the frontend you built on gh-pages, it will connect with your Heroku deployment.
 
 Challenge:
 * Turn all 4 backends into a single service-based backend and deploy that to Heroku.  Have a frontend with 4 pages, one for each backend.
@@ -39,6 +41,11 @@ Frontend vs Backend:
 * [What's an API?](https://www.youtube.com/watch?v=s7wmiS2mSXY)
 * [Frontend vs Backend - video](https://www.youtube.com/watch?v=nMtgFZSdtwk)
 * [Frontend vs Backend - article](https://www.pluralsight.com/blog/film-games/whats-difference-front-end-back-end)
+
+Promises:
+* [Scotch.io](https://scotch.io/tutorials/javascript-promises-for-dummies)
+* [JavaScript.info](https://javascript.info/promise-basics)
+* [Promises & Axios](https://github.com/elewa-academy/General-Resources/blob/master/javascript/async-to-sort.md)
 
 CORS:
 * [What is it?](https://www.codecademy.com/articles/what-is-cors)
