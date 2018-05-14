@@ -4,6 +4,8 @@ var api_connection = {
 		path = path.join("/");
 		this.datAxios.get(path) 
 			.then((response) => {
+				// this is like your view
+				// replace it with dom stuff to have browser UI
 				console.log(response.data);
 			})
 			.catch((error) => {
@@ -17,6 +19,7 @@ var api_connection = {
 		path = path.join("/");
 		this.datAxios.post(path, body) 
 			.then((response) => {
+				// replace it with dom stuff to have browser UI
 				console.log(response.data);
 			})
 			.catch((error) => {

@@ -14,7 +14,7 @@ app.use("/calculator", calc_service)
 let notes_service = require("./notes-service");
 app.use("/notes", notes_service)
 
-// to fix & understand this, look at ./.gitignore file
+// to fix & understand this, look at ./.gitignore file (what is a .gitignore?)
 //   your task is to reverse-engineer the ignored ./env-vars.js dependency
 let env_vars = require("./env-vars");
 app.listen(env_vars.PORT, function() { // process.env.PORT || 3000 - preview of coming attractions

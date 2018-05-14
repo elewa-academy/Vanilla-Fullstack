@@ -7,8 +7,8 @@ module.exports = {
 		aquatic: path.join(__dirname, "../dbs/aquatic.json")
 	},
 	ANIMALS: {
-		orcas: "aquatic",
 		swallows: "terrestrial",
+		orcas: "aquatic",
 		kangaroos: "terrestrial"
 	}
 }

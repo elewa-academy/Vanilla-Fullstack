@@ -77,7 +77,7 @@ app.post("/reset", function(req, res){
 
 app.get("/add", function(req, res){
     console.log("-- GET /add --");
-    res.json('put a new "note" property in the body and submit')
+    res.send('put a new "note" property in the body and submit')
 })
 
 app.post("/add", function(req, res){
