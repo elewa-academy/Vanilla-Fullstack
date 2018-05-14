@@ -35,10 +35,8 @@ module.exports = (model) => {
 			});
 		},
 		getOne: (req, res) => {
-			res.send("post with an \'index\' property in the body");
-		},
-		postOne: (req, res) => {
-			let index = res.body.index;
+			//res.send("post with an \'index\' property in the params");
+			let index = req.params.id;
 			model.read_one(index, (err, data) => {
 				if (err) {
 					console.log(err);
@@ -47,11 +45,21 @@ module.exports = (model) => {
 				}
 			});
 		},
+		// postOne: (req, res) => {
+		// 	let index = res.params.id;
+		// 	model.read_one(index, (err, data) => {
+		// 		if (err) {
+		// 			console.log(err);
+		// 		} else {
+		// 			res.send(data)
+		// 		}
+		// 	});
+		// },
 		getUpdate: (req, res) => {
 			res.send("post with an \'index\' & \'new_entry\' property in the body");
 		},
 		postUpdate: (req, res) => {
-			let index = res.body.index;
+			let index = req.params.id;
 			let new_entry = res.body.new_entry;
 			model.update(index, new_entry, (err, index, new_entry) => {
 				if (err) {
@@ -65,7 +73,7 @@ module.exports = (model) => {
 			res.send("post with an \'index\' property in the body. we delete it");
 		},
 		postDelete: (req, res) => {
-			let index = res.body.index;
+			let index = req.params.id;
 			model.remove(index, (err, index, new_entry) => {
 				if (err) {
 					console.log(err);

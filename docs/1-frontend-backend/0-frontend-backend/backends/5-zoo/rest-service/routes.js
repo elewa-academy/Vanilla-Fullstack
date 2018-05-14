@@ -1,7 +1,7 @@
-const express = require("express");
-const router = express.Router();
-
 module.exports = (controller) => {
+
+	const express = require("express");
+	let router = express.Router();
 
 	router.get("/", controller.home);
 
@@ -13,7 +13,7 @@ module.exports = (controller) => {
 	router.post("/add", controller.postAdd);
 
 	router.get("/:id", controller.getOne);
-	router.post("/:id", controller.postOne)
+	// router.post("/:id", controller.postOne);
 
 	router.get("/:id/update", controller.getUpdate);
 	router.post("/:id/update", controller.postUpdate);

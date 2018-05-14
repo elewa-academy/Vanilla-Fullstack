@@ -12,27 +12,32 @@ app.use(bodyParser.json())
 
 app.use(cors())
 
+function basic_logger(req, res, next) {
+	console.log(req.method, ": ", req.url);
+	next();
+};
+app.use(basic_logger)
+
 
 // set routes
 app.get("/", (req, res) => {
 	res.send("welcome to my zoo");
 })
 
-// initialize services
+// initialize & use services
 let rest_services = {}
+
 for (animal in config.ANIMALS) {
 
 	let path_to_db = config.DBs[config.ANIMALS[animal]];
 	let next_service = rest_service(animal, path_to_db); 
 	rest_services[animal] = next_service;
 
+	let route = "/" + animal;
+	app.use(route, next_service);	
+
 }
 
-console.log(rest_services)
-// use services
-app.get("/:data_type", (req, res) => {
-	rest_services[req.params.data_type]();
-})
 
 // launch app
 app.listen(config.PORT, (err) => {
