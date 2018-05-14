@@ -1,9 +1,0 @@
-{
-  "name": "rudolph",
-  "version": "1.0.0",
-  "description": "My module that does not do much",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-  }
-}

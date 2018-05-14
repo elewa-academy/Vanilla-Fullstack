@@ -1,1 +1,0 @@
-# build an shell script to build all modules

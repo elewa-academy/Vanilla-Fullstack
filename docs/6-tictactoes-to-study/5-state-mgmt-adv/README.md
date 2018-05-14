@@ -1,1 +1,0 @@
-fun things:  rewrite the fapp using some es6, then babel it.
