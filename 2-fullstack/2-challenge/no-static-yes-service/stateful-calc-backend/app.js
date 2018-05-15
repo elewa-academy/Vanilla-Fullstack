@@ -13,7 +13,7 @@ app.use(cors())
 // not statically serving the application
 
 let calc_service = require("./calc-service");
-app.use("/", calc_service);
+app.use("/api", calc_service);
 
 
 let env_vars = require("./env-vars");
