@@ -1,9 +1,0 @@
-{
-  "name": "model-constructor",
-  "version": "1.0.0",
-  "description": "a simple model object constructor",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-  }
-}
