@@ -15,6 +15,7 @@ Turn your Frontend/Backend project into a true Fullstack application.
 * Statically serving with Express
 * Complete Fullstack applications
 * Logging with Morgan
+* Cross Origin Resource Sharing
 
 [TOP](#index)
 
@@ -36,6 +37,10 @@ Tools & Libraries:
 * [Statically serving in Express](https://scotch.io/tutorials/use-expressjs-to-deliver-html-files)
 * [Getting Logging Right](https://blog.risingstack.com/node-js-logging-tutorial/)
 * [Morgan.js (logging)](https://github.com/expressjs/morgan)
+
+CORS:
+* [What is it?](https://www.codecademy.com/articles/what-is-cors)
+
 
 Code to Study:
 * Then here

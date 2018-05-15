@@ -15,14 +15,14 @@ app.use('/:fruit', function (req, res, next) {
         message += ' unknown fruit';
     };
     console.log('in \/:fruit');
-    next()
+    next();
 });
 
 app.use('/*/:id', function (req, res, next) {
     // params are by default strings
     message += ' ' + parseInt(req.params.id);
     console.log('in \/\*\/:id');
-    next()
+    next();
 });
 
 app.use(function (req, res, next) {

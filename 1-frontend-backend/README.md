@@ -1,6 +1,6 @@
-# Express API's
+# Frontend/Backend
 
-Put your sevice behind an API.
+Explore the relationship between the Frontend and the Backend.  You'll run simple API's in terminal, and access them from the browser using _asynchronous calls_ with Axios.js.
 
 ### Index
 * [Learning Objectives](#learning-objectives)
@@ -12,7 +12,6 @@ Put your sevice behind an API.
 ## Learning Objectives
 
 * Frontend/Backend relations
-* Deploying to Heroku
 * Cross Origin Resource Sharing
 * Environmental Variables
 * Promises (cooler callbacks)
@@ -27,7 +26,8 @@ Put your sevice behind an API.
   1. Clone this repo
   2. Run the API of your choice in the terminal (ie. node ./0-frontend-backend/backends/take-your-pick)
   3. Open the Frontend in your browser (ie. ./0-frontend-backend/frontend/index.html)
-  4. Follow the documentation in the browser to access the API you're running
+  4. Follow the documentation in the browser to access the API you're running.  
+    * (It's important to use the api_connection object because the browser can only send "get" requests from the url tab.)
 1. Build a new and pretty Frontend (HTML/CSS/JS) for the "api_connection" object provided as sample code, you can do it for whichever API you like most. (We recommend copying the file so you have the original as reference.)
 2. Deploy at least one of the provided backends to Heroku.
 3. Make a repository to host this project.  Run the frontend you built on gh-pages, it will connect with your Heroku deployment.
@@ -60,9 +60,6 @@ Environmental Variables:
 * [How-to 2](https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html)
 * And the project to study in this folder
 
-Deploying to Heroku:
-* [Their own tutorial](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
-* [Scotch.io](https://scotch.io/tutorials/how-to-deploy-a-node-js-app-to-heroku)
 
 [TOP](#index)
 

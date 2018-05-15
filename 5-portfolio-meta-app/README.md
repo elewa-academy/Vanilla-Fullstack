@@ -17,6 +17,7 @@ This process is surprisingly simple, you might even have fun doing it! But it ca
 * Creating Build Scripts
 * Using Local Modules
 * NPM Scripts
+* Deploying to Heroku
 
 [TOP](#index)
 
@@ -44,6 +45,10 @@ NPM Scripts:
 * [Scotch Tutorial](https://scotch.io/tutorials/using-npm-as-a-build-tool)
 * [NPM Build Scripts](https://deliciousbrains.com/npm-build-script/)
 * [NPM as a build tool](https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/)
+
+Deploying to Heroku:
+* [Their own tutorial](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
+* [Scotch.io](https://scotch.io/tutorials/how-to-deploy-a-node-js-app-to-heroku)
 
 [TOP](#index)
 

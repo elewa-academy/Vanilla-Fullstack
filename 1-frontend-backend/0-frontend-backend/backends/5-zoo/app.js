@@ -21,20 +21,18 @@ app.use(basic_logger)
 
 // set routes
 app.get("/", (req, res) => {
-	res.send("welcome to my zoo");
+	res.send("welcome to my zoo. we have: " + config.ANIMALS);
 })
 
 // initialize & use services
-let rest_services = {}
 
 for (animal in config.ANIMALS) {
 
 	let path_to_db = config.DBs[config.ANIMALS[animal]];
 	let next_service = rest_service(animal, path_to_db); 
-	rest_services[animal] = next_service;
 
 	let route = "/" + animal;
-	app.use(route, next_service);	
+	app.use(route, next_service);
 
 }
 

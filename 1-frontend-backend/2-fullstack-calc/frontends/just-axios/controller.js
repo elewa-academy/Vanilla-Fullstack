@@ -6,7 +6,7 @@ var controller = {
 		this.axios.post('/add', {a: _a, b: _b}) 
 			.then((response) => {
 				// call to view
-				view.render(response.data);
+				this.view.render(response.data);
 			})
 			.catch((error) => {
 				if(error) {	

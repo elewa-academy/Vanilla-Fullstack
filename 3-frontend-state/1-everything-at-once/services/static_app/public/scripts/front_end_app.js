@@ -1,11 +1,10 @@
 // notice all the 'app' calls in the the app object?
 // I've said not to do this 
 // but I'm doing it here because the alternative is context hell.
-// that's not the point of this codalong
+// that's not the point of this study code
 var app = {
 	api_connection: {},
 	local_state: 'local state',
-	// react doesn't provide you these methods
 	//	controller and routes
 	read_api: function() {
 		app.api_connection.get('/get') // axios call to get the data
