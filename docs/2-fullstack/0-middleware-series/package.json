@@ -1,0 +1,15 @@
+{
+  "name": "0-middleware-series",
+  "version": "1.0.0",
+  "description": "middlware are simply functions your server can use app.use and app.set configures the express app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

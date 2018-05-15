@@ -1,3 +1,9 @@
+Your Task:
+- refactor the frontend into M-V-C-L-H
+
+
+
+
 Fancy Fancy Time
     local/global state
     reusable dom components
