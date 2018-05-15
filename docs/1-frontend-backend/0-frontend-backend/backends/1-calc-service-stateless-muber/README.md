@@ -1,0 +1,1 @@
+Inspired by  https://github.com/StephenGrider/MongoCasts/tree/master/muber
