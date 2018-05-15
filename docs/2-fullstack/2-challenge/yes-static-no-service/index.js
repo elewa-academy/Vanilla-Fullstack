@@ -15,6 +15,8 @@ app.use(morgan('tiny'));
 const static_service = require('./static_service');
 app.use("/", static_service);
 
+// modify this file to also use the restful service
+
 app.listen(port, function(err) {
 	if (err) {
 		console.log(err);
