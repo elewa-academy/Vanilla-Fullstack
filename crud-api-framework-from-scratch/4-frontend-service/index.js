@@ -14,13 +14,12 @@ app.use(bodyParser.json())
 app.use(morgan('tiny'));
 
   // * statically serve our frontend
-app.use("/", express.static(path.join(__dirname + '/frontend')));
+let static_service = require("./frontend_service");
+app.use("/", static_service);
 
   // * use the backend service
-// let calc_service = require("./backend");
-// app.use("/api", calc_service);
-
-app.get("/home", () =>{});
+let calc_service = require("./backend");
+app.use("/api", calc_service);
 
   // * listen on a port
 app.listen(3001, (err) => {
