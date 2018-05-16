@@ -3,7 +3,6 @@ let router = express.Router();
 let model = require("./model");
 let logic = require("./logic");
 let controller = require("./controller");
-let routes = require("./routes")
 
 controller.model = model;
 controller.logic = logic;

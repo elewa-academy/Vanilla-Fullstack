@@ -26,7 +26,7 @@ This process is surprisingly simple, you might even have fun doing it! But it ca
 ## Specifications
 
 
-
+(Don't worry about this until later on when you've comfortably built a few projects).
 1. Take all of your Express apps that you are most proud of and host them on a single Heroku deployment as services in a single project.  Users can experience your different application by accessing different base URL extentions (ie. ".com/notes/...", ".com/calculator/..."). 
 2. Write a gulpfile that deletes and reinstalls a local module every time it is modified. 
 3. Include a script in your package.json that runs this script, so someone who simply wants to use your application can clone it and set it up without needing to modify a file.
