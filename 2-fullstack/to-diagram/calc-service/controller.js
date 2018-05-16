@@ -2,18 +2,18 @@ let controller = {
 	model: {},
 	logic: {},
 	operate: function(operation, a, b) {
+		// read state ("memory") from the model
 	    let lastResult = this.model.get_lastResult();
+
+	    // pass user input and state through logic (a pure function)
 	    let result = this.logic.operate(operation, a, b, lastResult);
+
+	    // update the state
 	    this.model.set_lastResult(result);
+    
+	    // return the result
 	    return result 
-	},
-	operate_async: function(operation, a, b, cb) {
-	    let lastResult = this.model.get_lastResult();
-	    let result = this.logic.operate(operation, a, b, lastResult);
-	    this.model.set_lastResult(result);
-	    // return result 
-	    cb(null, result);
 	}
-}
+};
 
 module.exports = controller;

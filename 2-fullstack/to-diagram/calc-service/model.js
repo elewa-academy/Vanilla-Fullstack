@@ -1,3 +1,5 @@
+// reads and writes the "state" of our application
+
 const fs = require('fs');
 const path = require('path');
 

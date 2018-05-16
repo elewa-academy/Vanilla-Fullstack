@@ -1,3 +1,4 @@
+// only pure function
 let calc_logic  = {
 	add: function(a, b) {
 		return a + b;
