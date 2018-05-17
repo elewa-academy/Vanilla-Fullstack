@@ -1,11 +1,19 @@
 const express = require("express");
+
 let router = express.Router();
+
+// require "empty" controller
+let controller = require("./controller");
+console.log("before dependency injection:")
+console.log(controller);
+// require controller dependencies
 let model = require("./model");
 let logic = require("./logic");
-let controller = require("./controller");
-
+// inject controller dependencies
 controller.model = model;
 controller.logic = logic;
+console.log("\nafter dependecny injection:")
+console.log(controller)
 
 
 // handler and view
