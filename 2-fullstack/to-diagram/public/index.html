@@ -12,7 +12,10 @@
   <script src="./handler.js"></script>
   <script src="./controller.js"></script>
   <script src="./view.js"></script>
+  <script src="./render-calc.js"></script>
+  <script src="./render-star.js"></script>
   <script src="./init.js"></script>
+
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -20,15 +23,12 @@
 </head>
 
 <body>
+  <div>
+    <button type="button" id="calc-button" class="btn btn-light">calc</button>
+    <button type="button" id="star-button" class="btn btn-light">star</button>
+  </div>
 
-  <div class="container">
-      <div class="box">
-          <input type="text" id="number1">
-          <button type="button" id="addButton" class="btn btn-light">+</button>
-          <input type="text" id="number2">
-      </div>    
-      <div class="box" id="output">
-      </div>
+  <div class="container" id="container">
   </div>
 
 </body>
