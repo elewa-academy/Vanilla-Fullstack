@@ -14,17 +14,11 @@ app.use(function(req, res, next) {
 	next()
 })
 
-// what's the difference between these?
-// app.get("/", express.static(path.join(__dirname + '/public')));
-app.use("/", express.static(path.join(__dirname + '/public')));
-
-let calc_service = require("./calc-service");
+// can test with httpie
+let calc_service = require("./routes");
 app.use("/api", calc_service);
+
 
 app.listen(3001, function() {
     console.log("listening in port 3001")
 })
-
-
-
-

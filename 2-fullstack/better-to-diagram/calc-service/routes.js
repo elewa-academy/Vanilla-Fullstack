@@ -39,6 +39,8 @@ router.post("/:operation", function(req, res) {
 });
 
 router.get("/last_result", (req, res) => {
+    // no user input to clean
+
     let response = controller.get_last_result();
 
     res.send(String(response));
