@@ -5,6 +5,8 @@
 * [2. Fullstack](./2-fullstack/README.md)
 * [3. Frontend State](./3-frontend-state/README.md)
 * [4. TicTacToes to Study](./4-tictactoes-to-study/READMe.md)
+* [Next: Your Final Project!]()
+* [Previous: Modular Design](https://elewa-academy.github.io/Modular-Design/)
 * [Wiki](https://github.com/elewa-academy/General-Resources/wiki)
 * [Repo](https://github.com/elewa-academy/Vanilla-Fullstack/tree/master)
 * [Home](https://elewa-academy.github.io)

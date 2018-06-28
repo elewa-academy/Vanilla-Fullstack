@@ -7,7 +7,7 @@ var app = {
 	local_state: 'local state',
 	//	controller and routes
 	read_api: function() {
-		app.api_connection.get('/get') // axios call to get the data
+		this.api_connection.get('/get') // axios call to get the data
 			.then((response) => {
 				app.render_display(response.data); // rerender dom with new data
 			})
@@ -42,11 +42,10 @@ var app = {
 		var new_state = text_input.value;
 		app.local_state = new_state;		
 	},
-	// react does these things
 	//	view stuff
 	initialize: function() {
 		console.log('hi');		
-		this.api_connection = axios.create({
+		app.api_connection = axios.create({
 			baseURL: 'http://localhost:3001'
 		});
 		this.render_input();
@@ -117,7 +116,6 @@ var app = {
 };
 
 
-/// I AM REACT
 
 
 

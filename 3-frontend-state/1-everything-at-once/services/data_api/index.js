@@ -1,10 +1,23 @@
-var routes = require('./routes');
-var auth = require('./auth');
-
 var express = require('express');
-var data_api = express.Router();
+var router = express.Router();
 
-data_api.use(auth);
-data_api.use(routes);
+var data = 'global state';
 
-module.exports = data_api;
+router.use(function() {
+	console.log("in api");
+})
+
+router.get('/get', (req, res) => {
+    res.json({data: data})
+});
+
+router.post('/post/:newData', (req, res) => {
+    data = req.params.newData;
+    res.json({message: 'global state updated'});
+});
+
+router.use((req, res, next) => {
+    res.json({404: 'no such route'})
+});
+
+module.exports = router;
