@@ -22,3 +22,33 @@ app.use("/api", calc_service);
 app.listen(3001, function() {
     console.log("listening in port 3001")
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
